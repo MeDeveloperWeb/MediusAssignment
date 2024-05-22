@@ -12,7 +12,7 @@ export default function About() {
       </h1>
       <p className="mx-8 m-4 text-justify">{about}</p>
 
-      <div className="flex gap-4">
+      <div className="flex gap-4 flex-wrap">
         {[cloudy, day, night].map((img, i) => (
           <Image
             key={i}
