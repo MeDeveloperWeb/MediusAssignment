@@ -2,7 +2,7 @@ import getWeather from './actions';
 import Weather from './_components/Weather';
 
 export default async function Home() {
-  const weather = await getWeather('lucknow');
+  const weather = await getWeather();
 
   return (
     <main className="flex flex-col justify-center items-center flex-1">

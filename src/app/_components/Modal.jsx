@@ -19,7 +19,13 @@ export default function Modal({ setWeather }) {
       <form
         onSubmit={async (e) => {
           e.preventDefault();
-          setWeather(await getWeather(inputRef.current.value));
+          const weather = await getWeather(inputRef.current.value);
+
+          if (weather.error) {
+            alert(weather.error);
+            return;
+          }
+          setWeather(weather);
           modalRef.current.close();
         }}
         className="mx-8 my-6 space-y-8"

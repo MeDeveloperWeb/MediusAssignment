@@ -40,8 +40,9 @@ export default function Weather({ weather: initWeather }) {
       <div className="flex justify-center items-center">
         <Image src={location} alt="location" width={40} height={40} />
         <div>
-          {weather.location.name}, {weather.location.region},{' '}
-          {weather.location.country}
+          {weather.location.name},{' '}
+          {weather.location.region ? weather.location.region + ', ' : ''}
+          {weather.location.country ? weather.location.country : ''}
         </div>
       </div>
       <button onClick={showModal} className="my-8 text-blue-600 underline">

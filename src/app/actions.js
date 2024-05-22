@@ -10,7 +10,7 @@ export default async function getWeather(city = 'pune') {
 
   if (!response.ok)
     return {
-      error: 'Something went wrong! Please Try later.'
+      error: 'City not Found or Something else went wrong! Please Try again.'
     };
 
   const data = await response.json();
