@@ -30,7 +30,10 @@ export default function Weather({ weather: initWeather }) {
               &deg;{unit === 'c' ? 'F' : 'C'}
             </button>
           </div>
-          <div>Feels like: {weather.current['feelslike_' + unit]}&deg;C</div>
+          <div>
+            Feels like: {weather.current['feelslike_' + unit]}&deg;
+            {unit.toUpperCase()}
+          </div>
         </div>
       </div>
       <WeatherDetailGrid weather={weather} />

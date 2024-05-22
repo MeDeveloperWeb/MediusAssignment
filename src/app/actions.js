@@ -14,7 +14,6 @@ export default async function getWeather(city = 'pune') {
     };
 
   const data = await response.json();
-  console.log(data);
 
   const icon =
     weatherIcons[
