@@ -11,7 +11,7 @@ export default function Contact() {
           placeholder="Enter Message Title"
         />
         <textarea
-          className="w-full card p-4"
+          className="w-full card p-4 h-[50vh]"
           placeholder="Enter Message Description"
         ></textarea>
         <div className="text-center">
